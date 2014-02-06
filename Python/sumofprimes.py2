@@ -1,0 +1,24 @@
+def isprime(n):
+	'''
+	This function returns 0 if a number is prime and -1 else.
+	'''
+	i = 2
+	while (i < n):
+		if (n % i == 0):
+			return (-1)
+		i += 1
+	return (0)
+
+def main():
+	n = 2
+	i = 0
+	sumofprimes = 0
+	while (i < 1000):
+		if (isprime(n) == 0):
+			i += 1
+			sumofprimes += n
+		n += 1
+	print(sumofprimes)
+	return (0)
+
+main()

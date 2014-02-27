@@ -6,22 +6,9 @@
 /*   By: htindon <htindon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/05 05:52:48 by htindon           #+#    #+#             */
-/*   Updated: 2014/02/06 09:00:32 by htindon          ###   ########.fr       */
+/*   Updated: 2014/02/28 00:31:29 by htindon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
- * This function takes an input from the command line. The input contains
- * multiple newline separated lines. There are 3 numbers / line.
- * - First number -> first number to divide by (first)
- * - Second number -> second number to divide by (second)
- * - Third number -> end number (end)
- * It is assumed that the input is already checked.
- * My function will increment from 1 (included) to end (included)
- * Numbers divisible by 'first' will be replaced by a F.
- * Numbers divisible by 'second' will be replaced by a B.
- * Numbers divisible by both will be replaced by FB.
- */
 
 #include <stdlib.h>
 #include <stdio.h>

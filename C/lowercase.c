@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   lowercase.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htindon <htindon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/05 17:27:05 by htindon           #+#    #+#             */
-/*   Updated: 2014/02/05 17:38:13 by htindon          ###   ########.fr       */
+/*   Created: 2014/02/28 23:18:11 by htindon           #+#    #+#             */
+/*   Updated: 2014/02/28 23:41:54 by htindon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int			to_lower(char *line)
+{
+	while (*line)
+	{
+		if (isupper(*line))
+			printf("%c", tolower(*line));
+		else
+			printf("%c", *line);
+		line++;
+	}
+	return (0);
+}
 
 int			readfile(char *filename)
 {
@@ -23,11 +35,11 @@ int			readfile(char *filename)
 	file = fopen(filename, "r");
 	if (file != NULL)
 	{
-		line = (char *)malloc(1024);	
+		line = (char *)malloc(1024);
 		while (1)
 		{
 			if (fgets(line, 1024, file))
-				printf("%s", tolower(&line));
+				to_lower(line);
 			else
 				break ;
 		}
